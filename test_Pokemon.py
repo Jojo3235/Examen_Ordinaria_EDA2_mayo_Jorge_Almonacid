@@ -35,40 +35,40 @@ class TestPokemon(unittest.TestCase):
 
     def test_clasificacion(self):
         poke1 = Pokemon('Charmander', 'Fuego', 39, 52, 43, 60, 50, 65)
-        self.assertEqual(poke1.clasificacion(), 'Charmander es de tipo Fuego')
+        self.assertEqual(poke1.clasificacion(), 'Tipo fuego')
 
         poke2 = Pokemon('Squirtle', 'Agua', 44, 48, 65, 50, 64, 43)
-        self.assertEqual(poke2.clasificacion(), 'Squirtle es de tipo Agua')
+        self.assertEqual(poke2.clasificacion(), 'Tipo agua')
 
         poke3 = Pokemon('Bulbasaur', 'Planta', 45, 49, 49, 65, 65, 45)
-        self.assertEqual(poke3.clasificacion(), 'Bulbasaur es de tipo Planta')
+        self.assertEqual(poke3.clasificacion(), 'Tipo planta')
 
         poke4 = Pokemon('Pikachu', 'Electrico', 35, 55, 40, 50, 50, 90)
-        self.assertEqual(poke4.clasificacion(), 'Pikachu es de tipo Electrico')
+        self.assertEqual(poke4.clasificacion(), 'Tipo electrico')
 
         poke5 = Pokemon('Eevee', 'Normal', 55, 55, 50, 45, 65, 55)
-        self.assertEqual(poke5.clasificacion(), 'Eevee es de tipo Normal')
+        self.assertEqual(poke5.clasificacion(), 'Tipo normal')
 
         poke6 = Pokemon('Mewtwo', 'Psiquico', 106, 110, 90, 154, 90, 130)
-        self.assertEqual(poke6.clasificacion(), 'Mewtwo es de tipo Psiquico')
+        self.assertEqual(poke6.clasificacion(), 'Tipo psiquico')
 
         poke7 = Pokemon('Mew', 'Psiquico', 100, 100, 100, 100, 100, 100)
-        self.assertEqual(poke7.clasificacion(), 'Mew es de tipo Psiquico')
+        self.assertEqual(poke7.clasificacion(), 'Tipo psiquico')
 
         poke8 = Pokemon('Gengar', 'Fantasma', 60, 65, 60, 130, 75, 110)
-        self.assertEqual(poke8.clasificacion(), 'Gengar es de tipo Fantasma')
+        self.assertEqual(poke8.clasificacion(), 'Tipo fantasma')
 
         poke9 = Pokemon('Gyarados', 'Agua', 95, 125, 79, 60, 100, 81)
-        self.assertEqual(poke9.clasificacion(), 'Gyarados es de tipo Agua')
+        self.assertEqual(poke9.clasificacion(), 'Tipo agua')
 
         poke10 = Pokemon('Golem', 'Roca', 80, 120, 130, 55, 65, 45)
-        self.assertEqual(poke10.clasificacion(), 'Golem es de tipo Roca')
+        self.assertEqual(poke10.clasificacion(), 'Tipo roca')
 
         poke11 = Pokemon('Onix', 'Roca', 35, 45, 160, 30, 45, 70)
-        self.assertEqual(poke11.clasificacion(), 'Onix es de tipo Roca')
+        self.assertEqual(poke11.clasificacion(), 'Tipo roca')
 
         poke12 = Pokemon('Pidgeot', 'Volador', 83, 80, 75, 70, 70, 101)
-        self.assertEqual(poke12.clasificacion(), 'Pidgeot es de tipo Volador')
+        self.assertEqual(poke12.clasificacion(), 'Tipo volador')
 
         poke13 = Pokemon('Butterfree', 'Bicho', 60, 45, 50, 90, 80, 70)
         self.assertEqual(poke13.clasificacion(), 'Tipo bicho')
