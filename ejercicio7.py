@@ -101,10 +101,10 @@ def main():
         "D": 0.05/1.09,
         "Z": 0.04/1.09,
         "K": 0.03/1.09,
-        " ": 0.03/1.09
+        ",": 0.03/1.09
     }
     arbol_huffman = construir_arbol_huffman(tabla_frecuencias)
-    mensaje = "HAZTE CON TODOS POKEMON"
+    mensaje = "HAZTE,CON,TODOS,POKEMON"
     mensaje_codificado = codificar_mensaje(arbol_huffman, mensaje)
     mensaje_decodificado = decodificar_mensaje(arbol_huffman, mensaje_codificado)
     print("Mensaje original: ", mensaje)
