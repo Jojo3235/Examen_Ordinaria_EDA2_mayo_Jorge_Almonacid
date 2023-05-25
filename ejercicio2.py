@@ -1,5 +1,5 @@
 class Pokemon:
-    def __init__(self, nombre, tipo, ps, ataque, defensa, ataque_especial, defensa_especial, velocidad):
+    def __init__(self, nombre, tipo, ps, ataque, defensa, ataque_especial, defensa_especial, velocidad, nivel):
         self.nombre = nombre
         self.tipo = tipo
         self.ps = ps
@@ -8,6 +8,7 @@ class Pokemon:
         self.ataque_especial = ataque_especial
         self.defensa_especial = defensa_especial
         self.velocidad = velocidad
+        self.nivel = nivel
         print(f"Se ha creado el Pokemon {self.nombre} de tipo {self.tipo} con éxito.")
 
     def clasificacion(self):
