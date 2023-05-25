@@ -104,7 +104,7 @@ def main():
         ",": 0.03/1.09
     }
     arbol_huffman = construir_arbol_huffman(tabla_frecuencias)
-    mensaje = "TONA,CAE"
+    mensaje = "HAZTE,CON,TODOS,POKEMON"
     mensaje_codificado = codificar_mensaje(arbol_huffman, mensaje)
     mensaje_decodificado = decodificar_mensaje(arbol_huffman, mensaje_codificado)
     print("Mensaje original: ", mensaje)
