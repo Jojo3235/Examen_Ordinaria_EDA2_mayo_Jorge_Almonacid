@@ -1,0 +1,10 @@
+@startuml
+class Pokeball {
+  - peso: float
+  - nombre: string
+  - precio: int
+  - fecha_fabricacion: datetime
+  + __init__(peso: float, nombre: string, precio: int, fecha_fabricacion: datetime)
+  + __str__(): string
+}
+@enduml
