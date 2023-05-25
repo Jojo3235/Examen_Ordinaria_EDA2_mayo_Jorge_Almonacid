@@ -1,0 +1,16 @@
+@startuml
+class Pokemon {
+    - nombre: str
+    - tipo: str
+    - ps: int
+    - ataque: int
+    - defensa: int
+    - ataque_especial: int
+    - defensa_especial: int
+    - velocidad: int
+    - nivel: int
+    + __init__(nombre: str, tipo: str, ps: int, ataque: int, defensa: int, ataque_especial: int, defensa_especial: int, velocidad: int, nivel: int)
+    + clasificacion(): str
+    + __str__(): str
+}
+@enduml

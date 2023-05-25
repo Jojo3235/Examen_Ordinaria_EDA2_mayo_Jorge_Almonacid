@@ -1,0 +1,50 @@
+@startuml
+class Grafo {
+    - vertices: dict
+    + agregar_vertice(vertice: int)
+    + agregar_arista(origen: int, destino: int)
+    + obtener_vertices(): list
+    + obtener_aristas(): list
+}
+
+Grafo --> Vertice
+Grafo --> Arista
+
+class Vertice {
+    - id: int
+    - vecinos: set
+    + __init__(id: int)
+    + agregar_vecino(vecino: int)
+    + obtener_vecinos(): set
+}
+
+class Arista {
+    - origen: int
+    - destino: int
+    + __init__(origen: int, destino: int)
+    + obtener_origen(): int
+    + obtener_destino(): int
+}
+
+1 -> 6
+1 -> 8
+2 -> 7
+2 -> 9
+3 -> 4
+3 -> 8
+4 -> 3
+4 -> 9
+4 -> 0
+5 -> 6
+6 -> 1
+6 -> 7
+6 -> 0
+7 -> 2
+7 -> 6
+8 -> 1
+8 -> 3
+9 -> 2
+9 -> 4
+0 -> 4
+0 -> 6
+@enduml

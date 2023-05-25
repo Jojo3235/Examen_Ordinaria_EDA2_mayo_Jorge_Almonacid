@@ -1,0 +1,19 @@
+@startuml
+class  Pokeball{
+    - fila: int
+    - columna: int
+    + __init__(fila: int, columna: int)
+    + mover(fila: int, columna: int): bool
+}
+
+Reina --> Posicion
+
+class Posicion {
+    - fila: int
+    - columna: int
+    + __init__(fila: int, columna: int)
+    + es_valida(): bool
+}
+
+Reina --> Posicion
+@enduml
