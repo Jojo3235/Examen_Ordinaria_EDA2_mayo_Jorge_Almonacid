@@ -1,0 +1,32 @@
+@startuml
+class Nodo {
+  - caracter: string
+  - frecuencia: float
+  - izquierda: Nodo
+  - derecha: Nodo
+  + __init__(caracter: string, frecuencia: float)
+  + __init__(izquierda: Nodo, derecha: Nodo)
+  + obtener_caracter(): string
+  + obtener_frecuencia(): float
+  + obtener_izquierda(): Nodo
+  + obtener_derecha(): Nodo
+  + es_hoja(): bool
+}
+
+class ArbolHuffman {
+  - raiz: Nodo
+  + __init__(frecuencias: dict)
+  + __init__(nodos: list)
+  + __init__(nodo: Nodo)
+  + construir_arbol(): None
+  + obtener_codificacion(caracter: string): string
+  + obtener_codificaciones(): dict
+}
+
+class Huffman {
+  + comprimir(datos: string): str
+  + descomprimir(datos: str, arbol: ArbolHuffman): str
+}
+
+
+@enduml
