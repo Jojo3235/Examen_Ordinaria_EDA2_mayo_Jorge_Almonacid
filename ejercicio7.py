@@ -88,23 +88,23 @@ def decodificar_mensaje(arbol_huffman, mensaje_codificado):
 
 def main():
     tabla_frecuencias = {
-        "T": 0.15,
-        "O": 0.15,
-        "A": 0.12,
-        "E": 0.10,
-        "H": 0.09,
-        "S": 0.07,
-        "P": 0.07,
-        "M": 0.07,
-        "N": 0.06,
-        "C": 0.06,
-        "D": 0.05,
-        "Z": 0.04,
-        "K": 0.03,
-        ",": 0.03
+        "T": 0.15/1.09,
+        "O": 0.15/1.09,
+        "A": 0.12/1.09,
+        "E": 0.10/1.09,
+        "H": 0.09/1.09,
+        "S": 0.07/1.09,
+        "P": 0.07/1.09,
+        "M": 0.07/1.09,
+        "N": 0.06/1.09,
+        "C": 0.06/1.09,
+        "D": 0.05/1.09,
+        "Z": 0.04/1.09,
+        "K": 0.03/1.09,
+        ",": 0.03/1.09
     }
     arbol_huffman = construir_arbol_huffman(tabla_frecuencias)
-    mensaje = "TONACAE"
+    mensaje = "TONA,CAE"
     mensaje_codificado = codificar_mensaje(arbol_huffman, mensaje)
     mensaje_decodificado = decodificar_mensaje(arbol_huffman, mensaje_codificado)
     print("Mensaje original: ", mensaje)
