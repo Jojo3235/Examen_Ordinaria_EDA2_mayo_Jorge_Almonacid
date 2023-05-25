@@ -1,0 +1,20 @@
+@startuml
+class Pokemon {
+  - nombre: string
+  - tipo: string
+  - ps: int
+  - ataque: int
+  - defensa: int
+  - ataque_especial: int
+  - defensa_especial: int
+  - velocidad: int
+  - nivel: int
+  + clasificacion(): string
+}
+
+nivel_terminado_en_37 --> mision_de_exploración
+nivel_terminado_en_78 --> mision_de_asalto
+nivel_178 --> traidor_eliminar
+Tipo_Fuego --> mision_de_exterminacion_a_la_Cueva_Lava
+Tipo_Tierra --> misión_de_exploración_al_Bosque_Verdanturf
+@enduml
