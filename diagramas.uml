@@ -1,0 +1,10 @@
+@startuml
+class Grafo {
+    - vertices: set
+    - aristas: dict
+    - pesos: dict
+    + agregar_vertice(valor)
+    + agregar_arista(desde, hasta, peso)
+    + mst_kruskal(): Grafo
+}
+@enduml
