@@ -1,0 +1,2 @@
+# Examen_Ordinaria_EDA2_mayo_Jorge_Almonacid
+https://github.com/Jojo3235/Examen_Ordinaria_EDA2_mayo_Jorge_Almonacid.git
