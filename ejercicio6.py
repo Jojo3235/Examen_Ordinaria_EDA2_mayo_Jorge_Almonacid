@@ -13,11 +13,23 @@ class Pokemon:
         self.sp_def = sp_def
         self.nivel = nivel
 
-def generar_pokemon() -> List[Pokemon]:
-    # Generar 800 Pokemon con nivel aleatorio
+def cargar_pokemon_csv() -> List[Pokemon]:
+    # Cargar los Pokemon desde el archivo CSV
     pokemon = []
-    for i in range(800):
-        pokemon.append(Pokemon(f"Pokemon {i}", "Agua", 100, 100, 100, 100, 100, 100, i))
+    with open('pokemon.csv', mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Saltar la primera fila (encabezados)
+        for row in reader:
+            nombre, tipo, nivel = row
+            hp = 100
+            ataque = 100
+            defensa = 100
+            velocidad = 100
+            sp_atk = 100
+            sp_def = 100
+            nivel = int(nivel)
+            pokemon.append(Pokemon(nombre, tipo, hp, ataque, defensa, velocidad, sp_atk, sp_def, nivel))
+
     return pokemon
 
 def cargar_pokemon_tablas_hash(pokemon: List[Pokemon]) -> tuple:
@@ -63,29 +75,16 @@ def obtener_misiones(pokemon: List[Pokemon]) -> tuple:
     mision_exploracion_bosque = []
     mision_exterminacion_cueva = []
     for p in pokemon:
-        if p.tipo == "Tierra":
+        if p.tipo.lower() == "tierra":
             mision_exploracion_bosque.append(p)
-        elif p.tipo == "Fuego":
+        elif p.tipo.lower() == "fuego":
             mision_exterminacion_cueva.append(p)
 
     return mision_asalto, mision_exploracion, mision_exploracion_bosque, mision_exterminacion_cueva
 
-def guardar_pokemon_csv(pokemon: List[Pokemon]) -> None:
-    # Guardar los Pokemon en un archivo CSV
-    with open('pokemon.csv', mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Nombre', 'Tipo', 'Nivel'])
-        for p in pokemon:
-            writer.writerow([p.nombre, p.tipo, p.nivel])
-
 def main():
-    #Cargar los pokemon del csv
-    pokemon = []
-    with open('pokemon.csv', mode='r') as file:
-        reader = csv.reader(file)
-        next(reader)
-        for row in reader:
-            pokemon.append(Pokemon(row[0], row[1], 100, 100, 100, 100, 100, 100, int(row[2])))
+    pokemon = cargar_pokemon_csv()
+    tabla_nivel, tabla_tipo = cargar_pokemon_tablas_hash(pokemon)
 
     # Obtener los Pokemon para las misiones
     mision_asalto, mision_exploracion, mision_exploracion_bosque, mision_exterminacion_cueva = obtener_misiones(pokemon)
@@ -106,3 +105,6 @@ def main():
     print("Pokemon para la misión de exterminación de la cueva:")
     for p in mision_exterminacion_cueva:
         print(p.nombre)
+
+if __name__ == "__main__":
+    main()
